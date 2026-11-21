@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spot the Difference — Lantern Night Market</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='24' font-size='24'%3E%F0%9F%94%8D%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div id="app">
+  <header>
+    <h1>🔍 Spot the Difference<small>three scenes · eight changes each</small></h1>
+    <div id="hud">
+      <span class="chip" id="level-chip">Level 1 · Lantern Night Market</span>
+      <span class="chip" id="found-chip">Found <b>0/8</b></span>
+      <span class="chip" id="remain-chip"><b>8</b> to go</span>
+      <span class="chip" id="timer-chip">⏱ <b>2:00</b></span>
+      <span class="chip" id="score-chip">Score <b>0</b></span>
+    </div>
+  </header>
+  <div id="timer-bar"><div id="timer-fill"></div></div>
+
+  <main id="boards">
+    <section class="board">
+      <h2>Picture A <span class="tag">left</span></h2>
+      <svg id="panel-left" role="img" aria-label="Left picture: find the differences"></svg>
+      <p class="caption" id="level-title">Level 1 — Lantern Night Market</p>
+    </section>
+    <section class="board">
+      <h2>Picture B <span class="tag">right</span></h2>
+      <svg id="panel-right" role="img" aria-label="Right picture: find the differences"></svg>
+      <p class="caption" id="level-caption">A fruit stall glows under paper lanterns.</p>
+    </section>
+  </main>
+
+  <div id="controls">
+    <button id="hint-btn" type="button">💡 Hint (3)</button>
+    <button id="restart-btn" type="button" class="secondary">↻ Restart level</button>
+    <button id="menu-btn" type="button" class="secondary">☰ Menu</button>
+    <span id="message" role="status"></span>
+  </div>
+</div>
+
+<div id="overlay"><div class="card" id="overlay-card"></div></div>
+<p id="status" role="status" aria-live="polite"></p>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
